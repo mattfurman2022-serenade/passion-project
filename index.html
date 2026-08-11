@@ -61,6 +61,7 @@
             margin-bottom: 16px;
             cursor: pointer;
             transition: all 0.2s ease-in-out;
+            position: relative;
         }
 
         .scenario-card:hover {
@@ -71,6 +72,7 @@
         .scenario-card.selected {
             border-color: var(--accent-color);
             background-color: #fff5f7;
+            cursor: default;
         }
 
         .scenario-title {
@@ -80,11 +82,10 @@
             margin-bottom: 8px;
         }
 
-        /* Styles for the hidden/revealed text state */
         .scenario-desc {
             font-size: 14px;
             color: #4a5568;
-            display: none; /* Initially hidden */
+            display: none;
             padding-top: 10px;
             border-top: 1px dashed var(--border-color);
             margin-top: 10px;
@@ -97,35 +98,24 @@
         }
 
         .scenario-card.selected .scenario-desc {
-            display: block; /* Revealed when selected */
+            display: block;
         }
 
         .scenario-card.selected .scenario-placeholder {
-            display: none; /* Placeholder hidden when selected */
+            display: none;
         }
 
-        .btn-submit {
-            display: block;
-            width: 100%;
-            padding: 14px;
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
+        /* Overlay indicator during network submission */
+        .status-indicator {
+            display: none;
+            font-size: 12px;
             font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.2s;
-            margin-top: 24px;
+            color: var(--accent-color);
+            margin-top: 5px;
         }
 
-        .btn-submit:hover {
-            background-color: var(--primary-hover);
-        }
-
-        .btn-submit:disabled {
-            background-color: #cbd5e0;
-            cursor: not-allowed;
+        .scenario-card.selected .status-indicator {
+            display: block;
         }
 
         .notification-banner {
@@ -142,7 +132,7 @@
 
         .opt-out {
             text-align: center;
-            margin-top: 16px;
+            margin-top: 24px;
             font-size: 14px;
         }
 
@@ -171,6 +161,7 @@
     <div class="scenario-card" onclick="selectScenario('Scenario 1: Gentle Connection', this)">
         <div class="scenario-title">Scenario 1: Gentle Connection</div>
         <div class="scenario-placeholder">✨ Click to reveal details...</div>
+        <div class="status-indicator" id="status1">Sending notification...</div>
         <div class="scenario-desc">
             No need to wander the many halls of the palace, I'm outside the room with gilded golden edges and a simple scripted name - 'Andromeda'.
 I open the door and you are there. Bright and glowing. A smile that gleams. Skin that glimmers. Eyes that brighten even more to see me.
@@ -185,6 +176,7 @@ Our lips touch, first with gentle apprehension, then with a kindled fire.
     <div class="scenario-card" onclick="selectScenario('Scenario 2: Escalating Intimacy', this)">
         <div class="scenario-title">Scenario 2: Escalating Intimacy</div>
         <div class="scenario-placeholder">✨ Click to reveal details...</div>
+        <div class="status-indicator" id="status2">Sending notification...</div>
         <div class="scenario-desc">
             No need to wander the many halls of the palace, I'm outside the room with gilded golden edges and a simple scripted name - 'Andromeda'.
 I open the door and you are there. Bright and glowing. A smile that gleams. Skin that glimmers. Eyes that brighten even more to see me.
@@ -193,13 +185,14 @@ I circle you and from behind begin to massage your shoulders and neck, drawing e
 Unable to pull from your enchantment, at the end of my words my lips kiss her neck, as I continue to massage the well-toned muscles of your shoulders and back, moving down your spine and out. Every muscle in your body becomes supple and calm. I circle back in front of you, all while your eyes are locked with my own. I take one hand and hold your soft cheek, while the other reaches down to grab your own hand and pull you upright. 
 Instinctively, our heads tilt and our faces move toward each other, stopping for a single pause, you inhale. I whisper, 'I never knew love could overwhelm me like this.'
 Our lips touch, first with gentle apprehension, then with a kindled fire.
-The kissing intensifies - tongues dance together while roaming hands explore. Your soft hands slide under my shirt and over my warm chest. My hands slide down your shoulders and back, until they knead the soft flesh of your ass and pull your lower body into me. I am engorged, and I can feel my cock push against my pants. The ridge of this bulge pushes against you and you exclaim a deep sigh that drops into a low moan - it is a sound I have longed for, imagined in my mind countless times, and now that my ears of heard it, I was compelled for it to continue. That moan, exhaled with your lips pressed against my own, is both exotic and familiar. My hand, in one fluid motion, raised your dress, pushed your panties aside and parted the lips below. My index and ring finger keep the soft skin open, while my middle finger finds your clitoris and brings the power of vigorous massage to bear. Your head tilts back and releases a gasp of pure abandon. I use the opportunity to pull the dress up and off of you completely, continuing to massage your pussy, feeling it swell and drip with your satisfaction. As the dress flew off and onto the floor, my opposite hand pulls you closer to me and my mouth finds your erect nipples - first the left, then the right. I roll them under my tongue, circle the areola, then squeeze the breast while sucking the nipple with sensual fervor. Your skin has begun to shimmer, now with the glisten of sweat from your face down to your abdomen, while I continue to massage and now finger your pussy with rhythmic pushes, sometimes deep, sometimes deeper. Your lower back arches in rhythm with my massaging hand, and I gently turn you and pushed you back to edge of king-sized bed, but I do not stop. Our eyes meet once more and we kiss deeply and now two fingers thrust even deeper inside. Without losing momentum or pace, I pushed your shoulders downward, and you sit on the edge of the bed, and simultaneously, I kneel down. You know what came next, and lean back onto the bed, now arching your hips against my hand. I lean forward and use both hands now, to spread the lips wide and press my mouth down on you. My tongue circles your now throbbing clitoris. I take the clit into my mouth and alternate between sucking on it and flicking it with the tip of my tongue. Your legs begin to quiver as an orgasm rushes through you. I hold both legs and prevent you from twisting away and prematurely ending this sensual act. I slow my motions and extend the wave of the orgasm well beyond any you have ever felt. Your fluids  drip into my mouth and I consume them like ambrosia. The smell of your sex entices me even more and I lap up every single remaining drop, until you are expended, falling unconscious for a handful of moments. I stand and remove my other clothes, standing before you with a cock so erect and throbbing it feels supernatural. You, surprisingly, sit up, smile a mischievous grin, reach out and touch my cock with your wistful touch. Your hands stroke my cock with both a smoothness and a passion I was not expecting. Then you pull me slightly forward, closer to you. You run your tongue along the side of my shaft, up and around the throbbing head, and down the other side. My heart begins to beat loudly in my ears. You kiss the head before opening your mouth wide, and pulling me inside. Your lips close around me and you begin to suck on my cock deeply, while your hands massage my balls and run up my stomach and chest. Your tongue wraps around me and plays with the end of my cock and the room begins to spin. You build in your rhythm, grabbing my ass to pull me further into your mouth and throat. I put one hand on her head, feeling your soft hair and thrust deep into your mouth. Then, I feel that unique flame burn from inside, and my cock begins to swell, even larger than before. You feel it too, and continue. Suddenly, I cum into your mouth and throat. You continue to suck and swallow me and the spinning room leaves me with complete vertigo.
+The kissing intensifies - tongues dance together while roaming hands explore. Your soft hands slide under my shirt and over my warm chest. My hands slide down your shoulders and back, until they knead the soft flesh of your ass and pull your lower body into me. I am engorged, and I can feel my cock push against my pants. The ridge of this bulge pushes against you and you exclaim a deep sigh that drops into a low moan - it is a sound I have longed for, imagined in my mind countless times, and now that my ears of heard it, I was compelled for it to continue. That moan, exhaled with your lips pressed against my own, is both exotic and familiar. My hand, in one fluid motion, raises your dress, pushes your panties aside and parts the lips below. My index and ring finger keep the soft skin open, while my middle finger finds your clitoris and brings the power of vigorous massage to bear. Your head tilts back and releases a gasp of pure abandon. I use the opportunity to pull the dress up and off of you completely, continuing to massage your pussy, feeling it swell and drip with your satisfaction. As the dress flies off and onto the floor, my opposite hand pulls you closer to me and my mouth finds your erect nipples - first the left, then the right. I roll them under my tongue, circle the areola, then squeeze the breast while sucking the nipple with sensual fervor. Your skin has begun to shimmer, now with the glisten of sweat from your face down to your abdomen, while I continue to massage and now finger your pussy with rhythmic pushes, sometimes deep, sometimes deeper. Your lower back arches in rhythm with my massaging hand, and I gently turn you and pushed you back to edge of king-sized bed, but I do not stop. Our eyes meet once more and we kiss deeply and now two fingers thrust even deeper inside. Without losing momentum or pace, I push your shoulders downward, and you sit on the edge of the bed, and simultaneously, I kneel down. You know what comes next, and lean back onto the bed, now arching your hips against my hand. I lean forward and use both hands now, to spread the lips wide and press my mouth down on you. My tongue circles your now throbbing clitoris. I take the clit into my mouth and alternate between sucking on it and flicking it with the tip of my tongue. Your legs begin to quiver as an orgasm rushes through you. I hold both legs and prevent you from twisting away and prematurely ending this sensual act. I slow my motions and extend the wave of the orgasm well beyond any you have ever felt. Your fluids drip into my mouth and I consume them like ambrosia. The smell of your sex entices me even more and I lap up every single remaining drop, until you are expended, falling unconscious for a handful of moments. I stand and remove my other clothes, standing before you with a cock so erect and throbbing it feels supernatural. You, surprisingly, sit up, smile a mischievous grin, reach out and touch my cock with your wistful touch. Your hands stroke my cock with both a smoothness and a passion I was not expecting. Then you pull me slightly forward, closer to you. You run your tongue along the side of my shaft, up and around the throbbing head, and down the other side. My heart begins to beat loudly in my ears. You kiss the head before opening your mouth wide, and pulling me inside. Your lips close around me and you begin to suck on my cock deeply, while your hands massage my balls and run up my stomach and chest. Your tongue wraps around me and plays with the end of my cock and the room begins to spin. You build in your rhythm, grabbing my ass to pull me further into your mouth and throat. I put one hand on her head, feeling your soft hair and thrust deep into your mouth. Then, I feel that unique flame burn from inside, and my cock begins to swell, even larger than before. You feel it too, and continue. Suddenly, I cum into your mouth and throat. You continue to suck and swallow me and the spinning room leaves me with complete vertigo.
         </div>
     </div>
 
     <div class="scenario-card" onclick="selectScenario('Scenario 3: Full Carnal Exploration', this)">
         <div class="scenario-title">Scenario 3: Full Carnal Exploration</div>
         <div class="scenario-placeholder">✨ Click to reveal details...</div>
+        <div class="status-indicator" id="status3">Sending notification...</div>
         <div class="scenario-desc">
             No need to wander the many halls of the palace, I'm outside the room with gilded golden edges and a simple scripted name - 'Andromeda'.
 I open the door and you are there. Bright and glowing. A smile that gleams. Skin that glimmers. Eyes that brighten even more to see me.
@@ -209,10 +202,10 @@ Unable to pull from your enchantment, at the end of my words my lips kiss her ne
 Instinctively, our heads tilt and our faces move toward each other, stopping for a single pause, you inhale. I whisper, 'I never knew love could overwhelm me like this.'
 Our lips touch, first with gentle apprehension, then with a kindled fire.
 The kissing intensifies - tongues dance together while roaming hands explore. Your soft hands slide under my shirt and over my warm chest. My hands slide down your shoulders and back, until they knead the soft flesh of your ass and pull your lower body into me. I am engorged, and I can feel my cock push against my pants. The ridge of this bulge pushes against you and you exclaim a deep sigh that drops into a low moan - it is a sound I have longed for, imagined in my mind countless times, and now that my ears of heard it, I was compelled for it to continue. That moan, exhaled with your lips pressed against my own, is both exotic and familiar. My hand, in one fluid motion, raised your dress, pushed your panties aside and parted the lips below. My index and ring finger keep the soft skin open, while my middle finger finds your clitoris and brings the power of vigorous massage to bear. Your head tilts back and releases a gasp of pure abandon. I use the opportunity to pull the dress up and off of you completely, continuing to massage your pussy, feeling it swell and drip with your satisfaction. As the dress flew off and onto the floor, my opposite hand pulls you closer to me and my mouth finds your erect nipples - first the left, then the right. I roll them under my tongue, circle the areola, then squeeze the breast while sucking the nipple with sensual fervor. Your skin has begun to shimmer, now with the glisten of sweat from your face down to your abdomen, while I continue to massage and now finger your pussy with rhythmic pushes, sometimes deep, sometimes deeper. Your lower back arches in rhythm with my massaging hand, and I gently turn you and pushed you back to edge of king-sized bed, but I do not stop. Our eyes meet once more and we kiss deeply and now two fingers thrust even deeper inside. Without losing momentum or pace, I pushed your shoulders downward, and you sit on the edge of the bed, and simultaneously, I kneel down. You know what came next, and lean back onto the bed, now arching your hips against my hand. I lean forward and use both hands now, to spread the lips wide and press my mouth down on you. My tongue circles your now throbbing clitoris. I take the clit into my mouth and alternate between sucking on it and flicking it with the tip of my tongue. Your legs begin to quiver as an orgasm rushes through you. I hold both legs and prevent you from twisting away and prematurely ending this sensual act. I slow my motions and extend the wave of the orgasm well beyond any you have ever felt. Your fluids  drip into my mouth and I consume them like ambrosia. The smell of your sex entices me even more and I lap up every single remaining drop, until you are expended, falling unconscious for a handful of moments. I stand and remove my other clothes, standing before you with a cock so erect and throbbing it feels supernatural. You, surprisingly, sit up, smile a mischievous grin, reach out and touch my cock with your wistful touch. Your hands stroke my cock with both a smoothness and a passion I was not expecting. Then you pull me slightly forward, closer to you. You run your tongue along the side of my shaft, up and around the throbbing head, and down the other side. My heart begins to beat loudly in my ears. You kiss the head before opening your mouth wide, and pulling me inside. Your lips close around me and you begin to suck on my cock deeply, while your hands massage my balls and run up my stomach and chest. Your tongue wraps around me and plays with the end of my cock and the room begins to spin. You build in your rhythm, grabbing my ass to pull me further into your mouth and throat. I put one hand on her head, feeling your soft hair and thrust deep into your mouth. Then, I feel that unique flame burn from inside, and my cock begins to swell, even larger than before. You feel it too, and continue. Suddenly, I cum into your mouth and throat. You continue to suck and swallow me and the spinning room leaves me with complete vertigo.
-After the room stops spinning, I notice that despite the incredible sensual blowjob, my cock is still hard and throbbing. You have a smile like a Cheshire cat, you lick your lips and lay back on the bed again. I lay with you, taking my cock and playing with your pussy lips for a second. You sit up slightly, with your mouth close to my ear, and says, 'Fuck me Scorpius, show me 'le pasion'.'
+After the room stops spinning, I notice that despite the incredible sensual blowjob, my cock is still hard and throbbing. You have a smile like a Cheshire cat, you lick your lips and lay back on the bed again. I lay with you, taking my cock and playing with your pussy lips for a second. You sit up slightly, with your mouth close to my ear, and say, 'Fuck me Scorpius, show me 'le pasion'.'
 You rest back against the bed as I enter you, while my hands move up and down your gorgeous body. You writhe under me as I push and pull, first slow and tender, before building to deep and forceful thrusts. One exploring hand of mine strokes your glowing face - you turn your cheek and suck on my thumb as I push deeper and harder. I raise your legs, changing the angle, and you exclaim a squeal of intense pleasure. I can feel that tendril of flame again, but it's too soon, so I slow down my pace. I pull out and rotate your hips until you are now on your knees. I enter you again, in one powerful single thrust, and you push your torso up with your arms, raising your head up and groan. I ask you, 'Is this what you want? I have much more to give you.' You reply, 'Don't stop fucking me.'
 And I don't. I feel every inch of you, flex my cock inside you as it becomes covered in your sweetness. At the end of each deep stroke, I flex my cock, feeling the innermost parts of you. With each flex you gasp.
-I lean back and let my cock rub against the upper wall of her pussy, making you squeal again, which in turn, makes my cock throb even more. I reach around your leg and flick a finger on your clitoris as I push deep, rubbing your cervix. We roll over and you adjust your position so we can '69'. The combination of your mouth on my cock again, while I also suck and eat your pussy, makes us both orgasm again. You swallow all of me. My face is covered in your cum and I lick my lips before licking your tender asshole. Once lubricated, I slide a single finger inside. You moan again, and once more my cock springs into action. You turn and sit on my throbbing cock, pushing it deep into your ass. You ride me, with your sexy tits bouncing, 'forcing' me to suck on them again, and squeeze them intensely as my cum filled your ass. We rest for a few minutes, staring at the ceiling, talking about how wonderful the universe is, how truly divine our connection is and how we will never be the same again, and relish the changes. After a few minutes, we move to the shower, where we continue to fuck and pleasure each other for what seems like hours. You come to bed and curl onto my chest as I stroke her hair and run my fingers down to the small of her back. 'Your pussy tastes amazing, I think I'm addicted.' I say as you smile and say, '143 forever'. 
+I lean back and let my cock rub against the upper wall of her pussy, making you squeal again, which in turn, makes my cock throb even more. I reach around your leg and flick a finger on your clitoris as I push deep, rubbing your cervix. We roll over and you adjust your position so we can '69'. The combination of your mouth on my cock again, while I also suck and eat your pussy, makes us both orgasm again. You swallow all of me. My face is covered in your cum and I lick my lips before licking your tender asshole. Once lubricated, I slide a single finger inside. You moan again, and once more my cock springs into action. You turn and sit on my throbbing cock, pushing it deep into your ass. You ride me, with your sexy tits bouncing, 'forcing' me to suck on them again, and squeeze them intensely as my cum fills your ass. We rest for a few minutes, staring at the ceiling, talking about how wonderful the universe is, how truly divine our connection is and how we will never be the same again, and relish the changes. After a few minutes, we move to the shower, where we continue to fuck and pleasure each other for what seems like hours. You come to bed and curl onto my chest as I stroke her hair and run my fingers down to the small of her back. 'Your pussy tastes amazing, I think I'm addicted.' I say as you smile and say, '143 forever'. 
         </div>
     </div>
 
@@ -226,34 +219,26 @@ I lean back and let my cock rub against the upper wall of her pussy, making you 
 </div>
 
 <script>
-    let currentSelection = null;
+    let transmissionLocked = false;
 
-    function selectScenario(choiceText, element) {
-        currentSelection = choiceText;
-        document.querySelectorAll('.scenario-card').forEach(card => card.classList.remove('selected'));
-        element.classList.add('selected');
-    }
+    function submitChoice(choiceText, element) {
+        // Prevent double clicks or multi-submissions while loading
+        if (transmissionLocked) return;
+        transmissionLocked = true;
 
-    function selectOptOut() {
-        currentSelection = "Opt-Out / Take it slow or just talk";
-        document.querySelectorAll('.scenario-card').forEach(card => card.classList.remove('selected'));
-        submitSelection();
-    }
-
-    function submitSelection() {
-        if (!currentSelection) {
-            alert("Please click a scenario to reveal it and make a selection.");
-            return;
+        // Highlight selected card visually and reveal hidden text description
+        if (element) {
+            document.querySelectorAll('.scenario-card').forEach(card => card.classList.remove('selected'));
+            element.classList.add('selected');
+            const indicator = element.querySelector('.status-indicator');
+            if (indicator) indicator.innerText = "Sending notification...";
         }
 
-        const submitButton = document.getElementById('submitBtn');
         const formInput = document.getElementById('formSelectionInput');
         const form = document.getElementById('submissionForm');
         const banner = document.getElementById('notification');
 
-        formInput.value = currentSelection;
-        submitButton.disabled = true;
-        submitButton.innerText = "Sending...";
+        formInput.value = choiceText;
 
         const data = new FormData(form);
         fetch(form.action, {
@@ -265,18 +250,19 @@ I lean back and let my cock rub against the upper wall of her pussy, making you 
         }).then(response => {
             if (response.ok) {
                 banner.style.display = 'block';
-                banner.innerText = "✔️ Choice sent successfully. Thank you for sharing your boundaries!";
-                submitButton.innerText = "Sent Successfully";
+                banner.innerText = "✔️ Selection logged. Your comfort level has been shared instantly!";
+                if (element) {
+                    const indicator = element.querySelector('.status-indicator');
+                    if (indicator) indicator.innerText = "✓ Notification Delivered";
+                }
                 window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
             } else {
-                alert("There was an issue sending your choice. Please try again.");
-                submitButton.disabled = false;
-                submitButton.innerText = "Send Selection Instantly";
+                alert("Could not process submission automatically. Please refresh and try again.");
+                transmissionLocked = false;
             }
         }).catch(error => {
             alert("Network error. Please try again.");
-            submitButton.disabled = false;
-            submitButton.innerText = "Send Selection Instantly";
+            transmissionLocked = false;
         });
     }
 </script>

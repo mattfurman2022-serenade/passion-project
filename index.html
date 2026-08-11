@@ -22,10 +22,10 @@
             color: var(--text-color);
             line-height: 1.6;
             margin: 0;
-            padding: 40px 20px; /* Added padding to top and bottom to prevent clipping */
+            padding: 40px 20px;
             display: flex;
             justify-content: center;
-            align-items: flex-start; /* Aligns content to top so it scrolls naturally */
+            align-items: flex-start;
             min-height: 100vh;
             box-sizing: border-box;
         }
@@ -80,9 +80,28 @@
             margin-bottom: 8px;
         }
 
+        /* Styles for the hidden/revealed text state */
         .scenario-desc {
             font-size: 14px;
             color: #4a5568;
+            display: none; /* Initially hidden */
+            padding-top: 10px;
+            border-top: 1px dashed var(--border-color);
+            margin-top: 10px;
+        }
+
+        .scenario-placeholder {
+            font-size: 14px;
+            color: #a0aec0;
+            font-style: italic;
+        }
+
+        .scenario-card.selected .scenario-desc {
+            display: block; /* Revealed when selected */
+        }
+
+        .scenario-card.selected .scenario-placeholder {
+            display: none; /* Placeholder hidden when selected */
         }
 
         .btn-submit {
@@ -151,6 +170,7 @@
 
     <div class="scenario-card" onclick="selectScenario('Scenario 1: Gentle Connection', this)">
         <div class="scenario-title">Scenario 1: Gentle Connection</div>
+        <div class="scenario-placeholder">✨ Click to reveal details...</div>
         <div class="scenario-desc">
             No need to wander the many halls of the palace, I'm outside the room with gilded golden edges and a simple scripted name - 'Andromeda'.
 I open the door and you are there. Bright and glowing. A smile that gleams. Skin that glimmers. Eyes that brighten even more to see me.
@@ -164,6 +184,7 @@ Our lips touch, first with gentle apprehension, then with a kindled fire.
 
     <div class="scenario-card" onclick="selectScenario('Scenario 2: Escalating Intimacy', this)">
         <div class="scenario-title">Scenario 2: Escalating Intimacy</div>
+        <div class="scenario-placeholder">✨ Click to reveal details...</div>
         <div class="scenario-desc">
             No need to wander the many halls of the palace, I'm outside the room with gilded golden edges and a simple scripted name - 'Andromeda'.
 I open the door and you are there. Bright and glowing. A smile that gleams. Skin that glimmers. Eyes that brighten even more to see me.
@@ -178,6 +199,7 @@ The kissing intensifies - tongues dance together while roaming hands explore. Yo
 
     <div class="scenario-card" onclick="selectScenario('Scenario 3: Full Carnal Exploration', this)">
         <div class="scenario-title">Scenario 3: Full Carnal Exploration</div>
+        <div class="scenario-placeholder">✨ Click to reveal details...</div>
         <div class="scenario-desc">
             No need to wander the many halls of the palace, I'm outside the room with gilded golden edges and a simple scripted name - 'Andromeda'.
 I open the door and you are there. Bright and glowing. A smile that gleams. Skin that glimmers. Eyes that brighten even more to see me.
@@ -220,7 +242,7 @@ I lean back and let my cock rub against the upper wall of her pussy, making you 
 
     function submitSelection() {
         if (!currentSelection) {
-            alert("Please make a selection or choose the option to take it slow.");
+            alert("Please click a scenario to reveal it and make a selection.");
             return;
         }
 
@@ -245,6 +267,7 @@ I lean back and let my cock rub against the upper wall of her pussy, making you 
                 banner.style.display = 'block';
                 banner.innerText = "✔️ Choice sent successfully. Thank you for sharing your boundaries!";
                 submitButton.innerText = "Sent Successfully";
+                window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
             } else {
                 alert("There was an issue sending your choice. Please try again.");
                 submitButton.disabled = false;

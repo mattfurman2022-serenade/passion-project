@@ -22,11 +22,12 @@
             color: var(--text-color);
             line-height: 1.6;
             margin: 0;
-            padding: 20px;
+            padding: 40px 20px; /* Added padding to top and bottom to prevent clipping */
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start; /* Aligns content to top so it scrolls naturally */
             min-height: 100vh;
+            box-sizing: border-box;
         }
 
         .container {
@@ -36,6 +37,7 @@
             padding: 30px;
             border-radius: 12px;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            margin-bottom: 40px;
         }
 
         h1 {
